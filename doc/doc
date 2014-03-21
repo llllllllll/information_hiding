@@ -1,9 +1,10 @@
 Joe Jevnik
 
-source:
+sources:
+  MMAP(2)
   dslab.ee.ncku.edu.tw/~tmc/final.ppt‎
 
-Background:
+Introduction:
 The function mmap() is used to map process address space memory addresses to
 memory objects; commonly these objects are files. When mapping to a file, one
 must consider what a file is in memory. In Unix-styled file systems, a file is
@@ -58,7 +59,7 @@ Notes about implementation:
 When testing, I was running linux 3.14-rc4 through linux 3.14-rc6, tested on
 ext4 and ntfs journaling systems with a page size of 4096.
 
-Limitations:
+Discussion:
 One major limitation is that it is difficult to distribute this hidden data. The
 internet does not work with block IO. When I upload a file 1 byte wide, it would
 only upload that byte's data, not the whole page. Complementary, when
