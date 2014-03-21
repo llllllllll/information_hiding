@@ -1,0 +1,12 @@
+# Joe Jevnik
+# 2014.2.19
+# Executes the hidden data with a given interpreter.
+
+#!/usr/bin/bash
+
+if [ $# -lt 2 ];then
+    echo "Usage: hexec INTERPRETER FILE"
+    exit
+fi
+
+./hread $2 | $1
